@@ -1,7 +1,11 @@
 # TaskNest 🗂️
 
 A simple and professional **to-do web app** for managing your daily tasks. Add tasks, view them in a clean list, and remove them when completed. Perfect for practicing JavaScript DOM manipulation and creating interactive web pages.
+---
+##Screenshot
 
+![image](https://github.com/SubX-00/TaskNest/blob/main/screenshot.png?raw=true)
+---
 ## Features
 
 - Add tasks with a single click  
