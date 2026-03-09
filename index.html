@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProTask | Minimalist Productivity</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <main class="container" role="main">
+        <header>
+            <h1>My Tasks</h1>
+            <p class="subtitle" id="date-display">Stay organized, stay ahead.</p>
+        </header>
+
+        <section class="form-group">
+            <label for="input" class="sr-only">Add a new task</label>
+            <div class="input-area">
+                <input 
+                    type="text" 
+                    id="input" 
+                    placeholder="What needs to be done?" 
+                    aria-label="New task description"
+                    autocomplete="off"
+                >
+                <button class="btn-add" id="add-btn" aria-label="Add task">
+                    <span>Add</span>
+                    <i class="fas fa-plus" aria-hidden="true"></i>
+                </button>
+            </div>
+            <span id="error-msg" class="is-hidden" style="color: var(--danger-color); font-size: 12px; margin-top: 5px;">
+                Please enter a task description.
+            </span>
+        </section>
+
+        <div class="task-stats" style="display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 14px; color: var(--text-secondary);">
+            <span id="task-count">0 Tasks Remaining</span>
+            <button id="clear-completed" style="font-size: 12px; cursor: pointer; color: var(--primary-color);">Clear All</button>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid var(--border-color); margin-bottom: 20px; opacity: 0.3;">
+
+        <section class="task-list" id="task-list" aria-live="polite">
+            <div class="task-list-empty" id="empty-state">
+                <i class="fas fa-clipboard-list" style="font-size: 2rem; margin-bottom: 10px; display: block;"></i>
+                Your list is empty. Add a task to get started!
+            </div>
+
+            </section>
+
+        <footer style="margin-top: 30px; text-align: center;">
+            <p style="font-size: 11px; color: var(--text-muted);">
+                Press <kbd style="background: #eee; padding: 2px 4px; border-radius: 3px; color: #333;">Enter</kbd> to add a task.
+            </p>
+        </footer>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
